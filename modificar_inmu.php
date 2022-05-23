@@ -3,7 +3,7 @@
 	
 	$id_inmu = $_GET['id_inmu'];
 	
-	$sql = "SELECT * FROM inmueble WHERE id_inmu = '$id_inmu'";
+	$sql = "SELECT * FROM inmueble WHERE id_inmu ='$id_inmu'";
 	$resultado=mysqli_query($conexion,$sql);
 
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
@@ -26,13 +26,7 @@
 			</div>
 			
 			<form class="form-horizontal" method="POST" action="modificar_inmu.php" autocomplete="off">
-				<div class="form-group">
-					<label for="id_inmu" class="col-sm-2 control-label">ID</label>
-					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="id_inmu" name="id_inmu" placeholder="ID" value="<?php echo $row['id_inmu']; ?>" required>
-					</div>
-				</div>
-				
+
 				<div class="form-group">
 					<label for="direc_inmu" class="col-sm-2 control-label">Nombre</label>
 					<div class="col-sm-10">

@@ -3,19 +3,16 @@
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
     
-	$id_inmu = $_POST['id_inmu'];
-    $direc_inmu = $_POST['direc_inmu'];    
-	$tip_inmu = $_POST['tip_inmu'];
-	$arri_inmu = $_POST['arri_inmu'];
-	$cant_habi = $_POST['cant_habi'];
-	$cant_bano = $_POST['cant_bano'];
-	$parq_inmu = $_POST['parq_inmu'];
-	$cont_cocina = $_POST['cont_cocina'];
 	$id_arren = $_POST['id_arren'];
+    $nom_arren = $_POST['nom_arren'];    
+	$tel_arren = $_POST['tel_arren'];
+	$num_cuen = $_POST['num_cuen'];
+	$tiempo_cont = $_POST['tiempo_cont'];
+	$num_cedula = $_POST['num_cedula'];
 
 	
 	
-	$sql = "UPDATE inmueble SET direc_inmu='$direc_inmu', tip_inmu='$tip_inmu', arri_inmu='$arri_inmu', cant_habi='$cant_habi' cant_bano='$cant_bano', parq_inmu'$parq_inmu', cont_cocina=$cont_cocina, id_arren'$id_arren'   WHERE id_inmu='$id_inmu'";
+	$sql = "UPDATE arrendatarios SET nom_arren='$nom_arren', tel_arren='$tel_arren', num_cuen='$num_cuen', tiempo_cont='$tiempo_cont' num_cedula='$num_cedula' WHERE id_arren='$id_arren'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>

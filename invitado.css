@@ -1,13 +1,4 @@
-body {
-    background-image: url(../css/IMG/invitado.jpeg);
-    width: 100%;
-    height: 100%vh;
-    background-size: cover;
-    font-family: Arial;
-    color: rgba(114, 47, 47, 0);
-}
-
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -15,47 +6,39 @@ body {
     box-sizing: border-box;
 }
 
-nav {
-    background: #000;
+nav{
+    background: #1b2525;
     height: 80px;
     width: 100%;
 }
-
-.enlace {
+.enlace{
     position: absolute;
     padding: 20px 50px;
 }
-
-.logo {
+.logo{
     height: 40px;
 }
-
-nav ul {
+nav ul{
     float: right;
     margin-right: 20px;
 }
-
-nav ul li {
+nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-
-nav ul li a {
+nav ul li a{
     color: #fff;
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-
-li a.active,
-li a:hover {
+li a.active, li a:hover{
     background: #000090;
     transition: .5s;
 }
-
-.checkbtn {
+.checkbtn{
     font-size: 30px;
     color: #fff;
     float: right;
@@ -64,32 +47,30 @@ li a:hover {
     cursor: pointer;
     display: none;
 }
-
-#check {
+#check{
     display: none;
 }
-
-section {
+section{
     background: url(inmo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);
 }
 
-@media (max-width: 952px) {
-    .enlace {
+@media (max-width: 952px){
+    .enlace{
         padding-left: 20px;
     }
-    nav ul li a {
+    nav ul li a{
         font-size: 16px;
     }
 }
 
-@media (max-width: 858px) {
-    .checkbtn {
+@media (max-width: 858px){
+    .checkbtn{
         display: block;
     }
-    ul {
+    ul{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -99,20 +80,19 @@ section {
         text-align: center;
         transition: all .5s;
     }
-    nav ul li {
+    nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a {
+    nav ul li a{
         font-size: 20px;
     }
-    li a:hover,
-    li a.active {
+    li a:hover, li a.active{
         background: none;
         color: rgba(75, 67, 67, 0.71);
     }
-    #check:checked~ul {
-        left: 0;
+    #check:checked ~ ul{
+        left:0;
     }
 }
