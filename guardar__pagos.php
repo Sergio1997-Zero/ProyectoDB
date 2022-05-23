@@ -1,10 +1,16 @@
 <?php
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
-
-	$id_arren = $_GET['id_arren'];
 	
-	$sql = "DELETE FROM arrendatarios WHERE id_arren = '$id_arren'";
+	
+	$id_pro = $_POST['id_pago'];
+	$nom_pro = $_POST['fec_pag_inmu'];
+	$num_cuen_pro = $_POST['mont_pag'];
+	$tel_pro = $_POST['tip_pag'];
+
+	
+	
+	$sql = "INSERT INTO pagos( id_pago, fec_pag_inmu, mont_pag, tip_pag ) VALUES ('$id_pro', '$nom_pro', '$tel_pro', '$num_cuen_pro','$tel_pro')";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -23,14 +29,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="row" style="text-align:center">
-				<?php if($resultado) { ?>
-				<h3>REGISTRO ELIMINADO</h3>
-				<?php } else { ?>
-				<h3>ERROR AL ELIMINAR</h3>
-				<?php } ?>
-				
-				<a href="arrendatarios.php" class="btn btn-primary">Regresar</a>
-				
+					<?php if($resultado) { ?>
+						<h3>REGISTRO GUARDADO</h3>
+						<?php } else { ?>
+						<h3>ERROR AL GUARDAR</h3>
+					<?php } ?>
+					
+
+					<a href="arrendatarios.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

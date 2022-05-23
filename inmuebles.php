@@ -25,13 +25,14 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
         <h2 style="text-align: center">inmuebles</h2>
         <form method ="POST">
         <div class="input-group-mb-3">
+        <a href="nuevo_inmu.php" class="btn btn-primary">Nuevo Registro</a><br>
 
             <div class="input-group-append">
                 
             </div>
         </div>
          </form  
-            <div class="row table-responsive">
+                <div class="row table-responsive">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -62,14 +63,15 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
                                 <td><?php echo $row['cont_cocina']; ?></td>
                                 <td><?php echo $row['id_arren']; ?></td>
 
-								<td><a href="modificar_inmu.php?id_inmu=<?php echo $row['id_inmu']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+								<td><a href="modificar_inmu.php?idCliente=<?php echo $row['id_inmu']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
 								<td><a href="#" data-href="eliminar_inmu.php?id_inmu=<?php echo $row['id_inmu'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
                                 
 							</tr>
-						<?php } ?>
+                        <?php } ?>
 					</tbody>
 				</table>
-			</div>
+                
+			    </div>
 		</div>
     <!-- Modal -->
 		<div class="modal fade" id_inmu="confirm-delete" id="confirm-delete"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

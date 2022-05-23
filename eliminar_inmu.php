@@ -2,9 +2,9 @@
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 
-	$idCliente = $_GET['id_inmu'];
+	$id_inmu = $_GET['id_inmu'];
 	
-	$sql = "DELETE FROM inmuebles WHERE id_inmu = '$idCliente'";
+	$sql = "DELETE FROM inmueble WHERE id_inmu ='$id_inmu'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>

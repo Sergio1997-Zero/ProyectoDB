@@ -2,14 +2,17 @@
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
-	$id_pro = $_POST['id_pro'];
-    $nom_pro = $_POST['nom_pro'];    
-	$num_cuen_pro = $_POST['num_cuen_pro'];
-	$email_pro = $_POST['email_pro'];
-	$id_inmu = $_POST['id_inmu'];
+    
+	$id_arren = $_POST['id_arren'];
+    $nom_arren = $_POST['nom_arren'];    
+	$tel_arren = $_POST['tel_arren'];
+	$num_cuen = $_POST['num_cuen'];
+	$tiempo_cont = $_POST['tiempo_cont'];
+	$num_cedula = $_POST['num_cedula'];
+
 	
 	
-	$sql = "UPDATE propietario SET id_pro='$id_pro',nom_pro='$nom_pro', num_cuen_pro='$num_cuen_pro', email_pro='$email_pro', id_inmu='$id_inmu' WHERE id_pro='$id_pro';";
+	$sql = "UPDATE arrendatarios SET nom_arren='$nom_arren', tel_arren='$tel_arren', num_cuen='$num_cuen', tiempo_cont='$tiempo_cont' num_cedula='$num_cedula' WHERE id_arren='$id_arren'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -33,7 +36,7 @@
 						<?php } else { ?>
 						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-                    <a href="propietarios.php" class="btn btn-primary">Regresar</a>
+                    <a href="nuevo.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

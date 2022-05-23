@@ -22,7 +22,7 @@
             <li><a href="propietarios.php">Propietarios</a></li>
             <li><a href="inmuebles.php">Inmuebles</a></li>
             <li><a href="arrendatarios.php">Arrendatarios</a></li>
-            <li><a href="pedidos.php">pedidos</a></li>
+            <li><a href="pagos.php">pedidos</a></li>
             <li><a href="productos.php">Productos</a></li>
             <li><a href="ventas.php">ventas</a></li>
         </ul>

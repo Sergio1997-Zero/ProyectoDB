@@ -2,9 +2,9 @@
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 
-	$id_arren = $_GET['id_arren'];
+	$id_pago = $_GET['id_pago'];
 	
-	$sql = "DELETE FROM arrendatarios WHERE id_arren = '$id_arren'";
+	$sql = "DELETE FROM pagos WHERE id_pago = '$id_pago'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>

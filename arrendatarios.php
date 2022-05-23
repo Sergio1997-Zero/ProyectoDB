@@ -25,6 +25,7 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
         <h2 style="text-align: center">inmuebles</h2>
         <form method ="POST">
         <div class="input-group-mb-3">
+        <a href="nuevo_arren.php" class="btn btn-primary">Nuevo Registro</a><br>
 
             <div class="input-group-append">
                 
@@ -57,7 +58,7 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
                                 <td><?php echo $row['num_cedula']; ?></td>
 
 								<td><a href="modificar_arren.php?id_arren=<?php echo $row['id_arren']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-								<td><a href="#" data-href="eliminar_inmu.php?id_arren=<?php echo $row['id_arren'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+								<td><a href="#" data-href="eliminar_arren.php?id_arren=<?php echo $row['id_arren'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
                                 
 							</tr>
 						<?php } ?>

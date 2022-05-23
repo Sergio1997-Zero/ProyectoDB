@@ -24,16 +24,13 @@
 
         <div class="container">
             <div class="row">
-                <h2 style="text-align: center">Inmobiliaria </h2>
+                <h2 style="text-align: center">Propietario</h2> </h2>
             </div>
 
             <div class="row">
                 <a href="nuevo.php" class="btn btn-primary">Nuevo Registro</a><br>
 
-				<form action="" method="POST">
-					<b>Nombre: </b><input type="text" id="cconsulta" name ="cconsulta"/>								
-					<a href="" data-href="" data-toggle= "modal" data-target="#modal_Resultados"><span><input type="submit" value="Buscar" class="btn btn-info" />	</span></a>
-				</form>
+
 
 
             </div>

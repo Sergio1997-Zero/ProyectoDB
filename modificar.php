@@ -3,7 +3,7 @@
 	
 	$idCliente = $_GET['id_pro'];
 	
-	$sql = "SELECT * FROM clientes WHERE id_pro = '$idCliente'";
+	$sql = "SELECT * FROM propietario WHERE id_pro = '$idCliente'";
 	$resultado=mysqli_query($conexion,$sql);
 
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
@@ -26,38 +26,40 @@
 			</div>
 			
 			<form class="form-horizontal" method="POST" action="update.php" autocomplete="off">
+
 				<div class="form-group">
-					<label for="idCliente" class="col-sm-2 control-label">ID</label>
+					<label for="id_pro" class="col-sm-2 control-label">id Propietario</label>
 					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="idCliente" name="idCliente" placeholder="ID" value="<?php echo $row['id_pro']; ?>" required>
+                        <input type="text" class="form-control" id="id_pro" name="id_pro" placeholder="Ingrese el id del propietario" value="<?php echo $row['id_pro']; ?>"  required>
+					</div>
+				</div>
+
+				
+				<div class="form-group">
+					<label for="nom_pro" class="col-sm-2 control-label">Nombre</label>
+					<div class="col-sm-10">
+                        <input type="text" class="form-control" id="nom_pro" name="nom_pro" placeholder="Ingrese su Nombre" value="<?php echo $row['nom_pro']; ?>"  required>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="nomCliente" class="col-sm-2 control-label">Nombre</label>
+					<label for="num_cuen_pro" class="col-sm-2 control-label">Cuenta</label>
 					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="nomCliente" name="nomCliente" placeholder="Ingrese su Nombre" value="<?php echo $row['nom_pro']; ?>"  required>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="telCliente" class="col-sm-2 control-label">Telefono</label>
-					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="telCliente" name="telCliente" placeholder="Ingrese su correo" value="<?php echo $row['num_cuen_pro']; ?>"  required>
+                        <input type="text" class="form-control" id="num_cuen_pro" name="num_cuen_pro" placeholder="Ingrese el numero de cuenta" value="<?php echo $row['num_cuen_pro']; ?>"  required>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="correoCliente" class="col-sm-2 control-label">Correo</label>
+					<label for="email_pro" class="col-sm-2 control-label">Correo</label>
 					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="correoCliente" name="correoCliente" placeholder="Ingrese su correo Electronico" value="<?php echo $row['email_pro']; ?>"  required>
+                        <input type="text" class="form-control" id="email_pro" name="email_pro" placeholder="Ingrese su correo Electronico" value="<?php echo $row['email_pro']; ?>"  required>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="direcCliente" class="col-sm-2 control-label">Dirección</label>
+					<label for="id_inmu" class="col-sm-2 control-label">Inmubele</label>
 					<div class="col-sm-10">
-                        <input type="text" class="form-control" id="direcCliente" name="direcCliente" placeholder="Ingrese su dirección" value="<?php echo $row['id_inmu']; ?>"  required>
+                        <input type="text" class="form-control" id="id_inmu" name="id_inmu" placeholder="Ingrese el id del inmueble" value="<?php echo $row['id_inmu']; ?>"  required>
 					</div>
 				</div>
 				

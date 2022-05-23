@@ -3,15 +3,17 @@
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
 	
-	$id_pro = $_POST['id_pro'];
-	$nom_pro = $_POST['nom_pro'];
-	$num_cuen_pro = $_POST['num_cuen_pro'];
-	$tel_pro = $_POST['tel_pro'];
-	$email_pro = $_POST['email_pro'];
-	$id_inmu = $_POST['id_inmu'];
+	$direc_inmu = $_POST['direc_inmu'];
+	$tip_inmu = $_POST['tip_inmu'];
+	$arri_inmu = $_POST['arri_inmu'];
+	$cant_habi = $_POST['cant_habi'];
+	$cant_bano = $_POST['cant_bano'];
+	$parq_inmu = $_POST['parq_inmu'];
+	$cont_cocina = $_POST['cont_cocina'];
+	$id_arren = $_POST['id_arren'];
 	
 	
-	$sql = "INSERT INTO propietario (id_pro, nom_pro, num_cuen_pro, tel_pro, email_pro, id_inmu ) VALUES ('$id_pro', '$nom_pro', '$num_cuen_pro', '$tel_pro', '$email_pro','$id_inmu')";
+	$sql = "INSERT INTO inmueble (direc_inmu, tip_inmu, arri_inmu, cant_habi, cant_bano, parq_inmu,cont_cocina,id_arren ) VALUES ('$direc_inmu', '$tip_inmu', '$arri_inmu', '$cant_habi', '$cant_bano','$parq_inmu','$cont_cocina','$id_arren' )";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -37,7 +39,7 @@
 					<?php } ?>
 					
 
-					<a href="propietarios.php" class="btn btn-primary">Regresar</a>
+					<a href="inmuebles.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>
