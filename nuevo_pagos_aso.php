@@ -13,35 +13,28 @@
 				<h3 style="text-align:center">NUEVO REGISTRO</h3>
 			</div>
 			
-			<form class="form-horizontal" method="POST" action="guardar__pagos.php" autocomplete="off">
+			<form class="form-horizontal" method="POST" action="guardar__pagos_aso.php" autocomplete="off">
 
 				
 				<div class="form-group">
-					<label for="fec_pag_inmu" class="col-sm-2 control-label">Fecha</label>
+					<label for="id_pago" class="col-sm-2 control-label">Id Pago</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="fec_pag_inmu" name="fec_pag_inmu" placeholder="ingrese fecha de pago" required>
+						<input type="text" class="form-control" id="id_pago" name="id_pago" placeholder="ingrese el id del pago" required>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<label for="mont_pag" class="col-sm-2 control-label">Monto</label>
+					<label for="id_inmu" class="col-sm-2 control-label">id Inmueble</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="mont_pag" name="mont_pag" placeholder="Ingrese monto pagado">
+						<input type="text" class="form-control" id="id_inmu" name="id_inmu" placeholder="Ingrese el id del inmueble">
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label for="tip_pag" class="col-sm-2 control-label">tipo</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="tip_pag" name="tip_pag" placeholder="Ingrese el tipo de pago">
-					</div>
-				</div>
 
-				
 				
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<a href="pagos.php" class="btn btn-default">Regresar</a>
+						<a href="Pagos_asociados.php" class="btn btn-default">Regresar</a>
 						<button type="submit" class="btn btn-primary">Guardar</button>
 					</div>
 				</div>

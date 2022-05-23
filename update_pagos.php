@@ -3,16 +3,12 @@
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
     
-	$id_arren = $_POST['id_arren'];
-    $nom_arren = $_POST['nom_arren'];    
-	$tel_arren = $_POST['tel_arren'];
-	$num_cuen = $_POST['num_cuen'];
-	$tiempo_cont = $_POST['tiempo_cont'];
-	$num_cedula = $_POST['num_cedula'];
-
+	$id_pago = $_POST['id_pago'];
+    $fec_pag_inmu = $_POST['fec_pag_inmu'];    
+	$mont_pag = $_POST['mont_pag'];
+	$tip_pag = $_POST['tip_pag'];
 	
-	
-	$sql = "UPDATE arrendatarios SET nom_arren='$nom_arren', tel_arren='$tel_arren', num_cuen='$num_cuen', tiempo_cont='$tiempo_cont' num_cedula='$num_cedula' WHERE id_arren='$id_arren'";
+	$sql = "UPDATE pagos SET id_pago='$id_pago', fec_pag_inmu='$fec_pag_inmu', mont_pag='$mont_pag', tip_pag='$tip_pag' WHERE id_pago='$id_pago'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -36,7 +32,7 @@
 						<?php } else { ?>
 						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-                    <a href="nuevo.php" class="btn btn-primary">Regresar</a>
+                    <a href="pagos.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

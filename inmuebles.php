@@ -63,7 +63,7 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
                                 <td><?php echo $row['cont_cocina']; ?></td>
                                 <td><?php echo $row['id_arren']; ?></td>
 
-								<td><a href="modificar_inmu.php?idCliente=<?php echo $row['id_inmu']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+								<td><a href="modificar_inmu.php?id_inmu=<?php echo $row['id_inmu']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
 								<td><a href="#" data-href="eliminar_inmu.php?id_inmu=<?php echo $row['id_inmu'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
                                 
 							</tr>

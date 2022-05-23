@@ -25,7 +25,7 @@
 				<h3 style="text-align:center">MODIFICAR REGISTRO</h3>
 			</div>
 			
-			<form class="form-horizontal" method="POST" action="modificar_inmu.php" autocomplete="off">
+			<form class="form-horizontal" method="POST" action="update_inmu.php" autocomplete="off">
 			<div class="form-group">
 					<label for="id_inmu" class="col-sm-2 control-label">Nombre</label>
 					<div class="col-sm-10">

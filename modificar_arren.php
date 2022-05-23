@@ -12,7 +12,7 @@
 <html lang="es">
 	<head>
 		
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css-bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="css-bootstrap-theme.css" rel="stylesheet">
         <script src="js/jquery-3.1.1.min.js"></script>
@@ -25,7 +25,7 @@
 				<h3 style="text-align:center">MODIFICAR REGISTRO</h3>
 			</div>
 			
-			<form class="form-horizontal" method="POST" action="modificar_arren.php" autocomplete="off">
+			<form class="form-horizontal" method="POST" action="update_arren.php" autocomplete="off">
 
 				<div class="form-group">
 					<label for="id_arren" class="col-sm-2 control-label">Id</label>

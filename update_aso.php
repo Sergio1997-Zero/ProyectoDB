@@ -2,15 +2,14 @@
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
-	
-	$id_pago = $_POST['id_pago'];
-	$fec_pag_inmu = $_POST['fec_pag_inmu'];
-	$mont_pag = $_POST['mont_pag'];
-	$tip_pag = $_POST['tip_pag'];
+    
+	$nom_cod = $_POST['nom_cod'];
+    $tel_cod = $_POST['tel_cod'];    
+	$cont_cod = $_POST['cont_cod'];
+	$id_cod = $_POST['id_cod'];
+	$id_arren = $_POST['id_arren'];
 
-	
-	
-	$sql = "INSERT INTO pagos( fec_pag_inmu, mont_pag, tip_pag ) VALUES ( '$fec_pag_inmu', '$mont_pag', '$tip_pag')";
+	$sql = "UPDATE codeudor SET nom_cod='$nom_cod', tel_cod='$tel_cod', cont_cod='$cont_cod', id_cod='$id_cod', id_arren='$id_arren' WHERE id_cod='$id_cod'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -30,13 +29,11 @@
 			<div class="row">
 				<div class="row" style="text-align:center">
 					<?php if($resultado) { ?>
-						<h3>REGISTRO GUARDADO</h3>
+						<h3>REGISTRO MODIFICADO</h3>
 						<?php } else { ?>
-						<h3>ERROR AL GUARDAR</h3>
+						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-					
-
-					<a href="pagos.php" class="btn btn-primary">Regresar</a>
+                    <a href="codeudor.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

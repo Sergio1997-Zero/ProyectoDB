@@ -22,7 +22,7 @@ $conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
     </head>
     <body> 
     <div class="container">
-        <h2 style="text-align: center">inmuebles</h2>
+        <h2 style="text-align: center">Arrendatarios</h2>
         <form method ="POST">
         <div class="input-group-mb-3">
         <a href="nuevo_arren.php" class="btn btn-primary">Nuevo Registro</a><br>

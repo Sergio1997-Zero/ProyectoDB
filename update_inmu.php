@@ -15,7 +15,7 @@
 
 	
 	
-	$sql = "UPDATE inmueble SET direc_inmu='$direc_inmu', tip_inmu='$tip_inmu', arri_inmu='$arri_inmu', cant_habi='$cant_habi' cant_bano='$cant_bano', parq_inmu'$parq_inmu', cont_cocina=$cont_cocina, id_arren'$id_arren'   WHERE id_inmu='$id_inmu'";
+	$sql = "UPDATE inmueble SET direc_inmu='$direc_inmu', tip_inmu='$tip_inmu', arri_inmu='$arri_inmu', cant_habi='$cant_habi' ,cant_bano='$cant_bano', parq_inmu='$parq_inmu', cont_cocina='$cont_cocina', id_arren='$id_arren'   WHERE id_inmu='$id_inmu'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -39,7 +39,7 @@
 						<?php } else { ?>
 						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-                    <a href="nuevo.php" class="btn btn-primary">Regresar</a>
+                    <a href="inmuebles.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@
 
     $where = "";	
 
-    $sql = "SELECT * FROM propietario";
+    $sql = "SELECT * FROM tiene";
    
     $resultado=mysqli_query($conexion,$sql);
 
@@ -24,11 +24,11 @@
 
         <div class="container">
             <div class="row">
-                <h2 style="text-align: center">Propietario</h2> </h2>
+                <h2 style="text-align: center">Pagos asociados</h2> </h2>
             </div>
 
             <div class="row">
-                <a href="nuevo.php" class="btn btn-primary">Nuevo Registro</a><br>
+                <a href="nuevo_pagos_aso.php" class="btn btn-primary">Nuevo Registro</a><br>
 
 
 
@@ -40,11 +40,9 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th>id_pro</th>
-                        <th>nom_pro</th>
-                        <th>num_cuen_pro</th>
-                        <th>email_pro</th>
+                        <th>id_pago</th>
                         <th>id_inmu</th>
+
                         <th></th>
 						<th></th>
 
@@ -53,14 +51,11 @@
                     <tbody>
 	                    <?php while($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
 							<tr>
-								<td><?php echo $row['id_pro']; ?></td>
-								<td><?php echo $row['nom_pro']; ?></td>
-								<td><?php echo $row['num_cuen_pro']; ?></td>
-								<td><?php echo $row['email_pro']; ?></td>
-                                <td><?php echo $row['id_inmu']; ?></td>
-                                <td><a href="modificar.php?id_pro=<?php echo $row['id_pro']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+								<td><?php echo $row['id_pago']; ?></td>
+								<td><?php echo $row['id_inmu']; ?></td>
+                                <td><a href="modificar_pagos_aso.php?id_pago=<?php echo $row['id_pago']; ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
 	
-								<td><a href="#" data-href="eliminar.php?id_pro=<?php echo $row['id_pro'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+								<td><a href="#" data-href="eliminar_pagos_aso.php?id_pago=<?php echo $row['id_pago'];?>" data-toggle= "modal" data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a></td>
 
 							</tr>
 						<?php } ?>
@@ -70,13 +65,13 @@
 		</div>
 			
 		<!-- Modal -->
-		<div class="modal fade" id_pro="confirm-delete" id="confirm-delete"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id_pago="confirm-delete" id="confirm-delete"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id_pro="myModalLabel">Eliminar Registro</h4>
+						<h4 class="modal-title" id_pago="myModalLabel">Eliminar Registro</h4>
 					</div>
 					
 					<div class="modal-body">
@@ -91,6 +86,8 @@
 			</div>
 		</div>		
 
+
+		
 		<script>
 			$('#confirm-delete').on('shown.bs.modal', function(e) {
 				$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));

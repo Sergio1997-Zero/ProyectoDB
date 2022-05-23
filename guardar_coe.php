@@ -3,14 +3,13 @@
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
 	
-	$id_pago = $_POST['id_pago'];
-	$fec_pag_inmu = $_POST['fec_pag_inmu'];
-	$mont_pag = $_POST['mont_pag'];
-	$tip_pag = $_POST['tip_pag'];
+	$nom_cod = $_POST['nom_cod'];
+	$tel_cod = $_POST['tel_cod'];
+	$cont_cod = $_POST['cont_cod'];
+	$id_cod = $_POST['id_cod'];
+	$id_arren = $_POST['id_arren'];
 
-	
-	
-	$sql = "INSERT INTO pagos( fec_pag_inmu, mont_pag, tip_pag ) VALUES ( '$fec_pag_inmu', '$mont_pag', '$tip_pag')";
+	$sql = "INSERT INTO codeudor( nom_cod, tel_cod,cont_cod, id_cod , id_arren) VALUES ( '$nom_cod', '$tel_cod', '$cont_cod', '$id_cod', '$id_arren')";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -36,7 +35,7 @@
 					<?php } ?>
 					
 
-					<a href="pagos.php" class="btn btn-primary">Regresar</a>
+					<a href="codeudor.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

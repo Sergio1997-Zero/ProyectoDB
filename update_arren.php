@@ -12,7 +12,7 @@
 
 	
 	
-	$sql = "UPDATE arrendatarios SET nom_arren='$nom_arren', tel_arren='$tel_arren', num_cuen='$num_cuen', tiempo_cont='$tiempo_cont' num_cedula='$num_cedula' WHERE id_arren='$id_arren'";
+	$sql = "UPDATE arrendatarios SET nom_arren='$nom_arren', tel_arren='$tel_arren', num_cuen='$num_cuen', tiempo_cont='$tiempo_cont', num_cedula='$num_cedula' WHERE id_arren='$id_arren'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -36,7 +36,7 @@
 						<?php } else { ?>
 						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-                    <a href="nuevo.php" class="btn btn-primary">Regresar</a>
+                    <a href="arrendatarios.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

@@ -2,15 +2,14 @@
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
 	
-	
+    
 	$id_pago = $_POST['id_pago'];
-	$fec_pag_inmu = $_POST['fec_pag_inmu'];
-	$mont_pag = $_POST['mont_pag'];
-	$tip_pag = $_POST['tip_pag'];
+    $id_inmu = $_POST['id_inmu'];    
+
 
 	
 	
-	$sql = "INSERT INTO pagos( fec_pag_inmu, mont_pag, tip_pag ) VALUES ( '$fec_pag_inmu', '$mont_pag', '$tip_pag')";
+	$sql = "UPDATE tiene SET id_pago='$id_pago', id_inmu='$id_inmu' WHERE id_pago='$id_pago'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -30,13 +29,11 @@
 			<div class="row">
 				<div class="row" style="text-align:center">
 					<?php if($resultado) { ?>
-						<h3>REGISTRO GUARDADO</h3>
+						<h3>REGISTRO MODIFICADO</h3>
 						<?php } else { ?>
-						<h3>ERROR AL GUARDAR</h3>
+						<h3>ERROR AL MODIFICAR</h3>
 					<?php } ?>
-					
-
-					<a href="pagos.php" class="btn btn-primary">Regresar</a>
+                    <a href="Pagos_asociados.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

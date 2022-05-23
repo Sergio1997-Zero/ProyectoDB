@@ -4,13 +4,9 @@
 	
 	
 	$id_pago = $_POST['id_pago'];
-	$fec_pag_inmu = $_POST['fec_pag_inmu'];
-	$mont_pag = $_POST['mont_pag'];
-	$tip_pag = $_POST['tip_pag'];
-
+	$id_inmu = $_POST['id_inmu'];
 	
-	
-	$sql = "INSERT INTO pagos( fec_pag_inmu, mont_pag, tip_pag ) VALUES ( '$fec_pag_inmu', '$mont_pag', '$tip_pag')";
+	$sql = "INSERT INTO tiene( id_pago, id_inmu) VALUES ( '$id_pago', '$id_inmu')";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -36,7 +32,7 @@
 					<?php } ?>
 					
 
-					<a href="pagos.php" class="btn btn-primary">Regresar</a>
+					<a href="Pagos_asociados.php" class="btn btn-primary">Regresar</a>
 				</div>
 			</div>
 		</div>

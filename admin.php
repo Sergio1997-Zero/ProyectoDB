@@ -22,9 +22,9 @@
             <li><a href="propietarios.php">Propietarios</a></li>
             <li><a href="inmuebles.php">Inmuebles</a></li>
             <li><a href="arrendatarios.php">Arrendatarios</a></li>
-            <li><a href="pagos.php">pedidos</a></li>
-            <li><a href="productos.php">Productos</a></li>
-            <li><a href="ventas.php">ventas</a></li>
+            <li><a href="pagos.php">pagos</a></li>
+            <li><a href="Pagos_asociados.php">pagos asociados</a></li>
+            <li><a href="codeudor.php">Codeudor</a></li>
         </ul>
     </nav>
     <section></section>

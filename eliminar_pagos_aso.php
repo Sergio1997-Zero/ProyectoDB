@@ -1,16 +1,10 @@
 <?php
 	
 	$conexion=mysqli_connect("localhost","user","0707","inmobiliaria");
-	
-	
-	$id_pago = $_POST['id_pago'];
-	$fec_pag_inmu = $_POST['fec_pag_inmu'];
-	$mont_pag = $_POST['mont_pag'];
-	$tip_pag = $_POST['tip_pag'];
 
+	$id_pago = $_GET['id_pago'];
 	
-	
-	$sql = "INSERT INTO pagos( fec_pag_inmu, mont_pag, tip_pag ) VALUES ( '$fec_pag_inmu', '$mont_pag', '$tip_pag')";
+	$sql = "DELETE FROM tiene WHERE id_pago = '$id_pago'";
 	$resultado=mysqli_query($conexion,$sql);
 	
 ?>
@@ -29,14 +23,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="row" style="text-align:center">
-					<?php if($resultado) { ?>
-						<h3>REGISTRO GUARDADO</h3>
-						<?php } else { ?>
-						<h3>ERROR AL GUARDAR</h3>
-					<?php } ?>
-					
-
-					<a href="pagos.php" class="btn btn-primary">Regresar</a>
+				<?php if($resultado) { ?>
+				<h3>REGISTRO ELIMINADO</h3>
+				<?php } else { ?>
+				<h3>ERROR AL ELIMINAR</h3>
+				<?php } ?>
+				
+				<a href="Pagos_asociados.php" class="btn btn-primary">Regresar</a>
+				
 				</div>
 			</div>
 		</div>
