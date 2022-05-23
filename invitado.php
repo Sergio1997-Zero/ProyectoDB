@@ -7,9 +7,11 @@
     <title>Menú Responsive</title>
     <link rel="stylesheet" href="invitado.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <nav>
+        
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
